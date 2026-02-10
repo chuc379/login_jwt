@@ -1,1 +1,4 @@
-# login_jwt
+{
+  "username": "admin",
+  "password": "123456"
+}
