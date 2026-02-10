@@ -3,7 +3,7 @@
 from fastapi import HTTPException, status
 from jose import jwt, JWTError
 
-from login_jwt.core.config import SECRET_KEY, ALGORITHM
+from core.config import SECRET_KEY, ALGORITHM
 
 def decode_access_token(token: str):
     try:

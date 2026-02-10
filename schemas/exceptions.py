@@ -1,8 +1,8 @@
 from fastapi import Request
 from fastapi.responses import JSONResponse
 from pydantic import BaseModel
-from login_jwt.entities.errors import DomainError
-from login_jwt.schemas.CreateUser_schema import ErrorCreateUserResponse
+from entities.errors import DomainError
+from schemas.CreateUser_schema import ErrorCreateUserResponse
 
 # --- Global handler ---
 def domain_exception_handler(request: Request, exc: DomainError):

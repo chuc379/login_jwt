@@ -2,9 +2,9 @@ from fastapi import FastAPI, Depends
 from fastapi.security import HTTPBearer, HTTPAuthorizationCredentials
 from fastapi import status, HTTPException
 
-from login_jwt.controllers.all_controller import router as auth_router
-from login_jwt.schemas.exceptions import domain_exception_handler
-from login_jwt.entities.errors import DomainError
+from controllers.all_controller import router as auth_router
+from schemas.exceptions import domain_exception_handler
+from entities.errors import DomainError
 
 app = FastAPI(title="Auth Service")
 

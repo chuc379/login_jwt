@@ -1,13 +1,11 @@
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
 
-from login_jwt.schemas.auth_schema import LoginRequest, TokenResponse
-from login_jwt.core.security import get_current_user,get_db
+from schemas.auth_schema import LoginRequest, TokenResponse
+from core.security import get_current_user,get_db
 
-from login_jwt.repositories.user_repository import UserRepository
-
-
-from login_jwt.services.auth_service import AuthService
+from repositories.user_repository import UserRepository
+from services.auth_service import AuthService
 
 router = APIRouter(prefix="/auth", tags=["Auth"])
 

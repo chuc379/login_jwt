@@ -5,11 +5,11 @@ from fastapi.security import HTTPBearer, HTTPAuthorizationCredentials
 from passlib.context import CryptContext
 from sqlalchemy.orm import Session
 
-from login_jwt.core.database import SessionLocal
-from login_jwt.core.jwt_encode import create_access_token
-from login_jwt.core.jwt_decode import decode_access_token
-from login_jwt.entities.user import User
-from login_jwt.repositories.user_repository import UserRepository
+from core.database import SessionLocal
+from core.jwt_encode import create_access_token
+from core.jwt_decode import decode_access_token
+from entities.user import User
+from repositories.user_repository import UserRepository
 
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 security = HTTPBearer()
